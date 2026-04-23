@@ -9,16 +9,14 @@ const rSquaredData = [
   { sport: 'Basketball', 'Physical Only': 0.008, 'Enhanced (Skills)': 0.772 },
   { sport: 'Soccer', 'Physical Only': 0.002, 'Enhanced (Skills)': 0.089 },
   { sport: 'Baseball', 'Physical Only': 0.255, 'Enhanced (Skills)': 0.480 },
-  { sport: 'Football', 'Physical Only': 0.354, 'Enhanced (Skills)': 0.812 },
+  { sport: 'Football', 'Physical Only': 0.400, 'Enhanced (Skills)': 0.599 },
 ];
 
 const nflPositionalData = [
-  { position: 'Defensive Line', physicalWeight: 0.62, category: 'Defense' },
-  { position: 'Linebackers', physicalWeight: 0.55, category: 'Defense' },
-  { position: 'DefBs / Safeties', physicalWeight: 0.48, category: 'Defense' },
-  { position: 'Wide Receivers', physicalWeight: 0.22, category: 'Offense' },
-  { position: 'Running Backs', physicalWeight: 0.15, category: 'Offense' },
-  { position: 'Quarterbacks', physicalWeight: 0.08, category: 'Offense' },
+  { position: 'Defense (Pooled)', physicalWeight: 0.599, category: 'Defense' },
+  { position: 'Wide Receivers', physicalWeight: 0.238, category: 'Offense' },
+  { position: 'Quarterbacks', physicalWeight: 0.140, category: 'Offense' },
+  { position: 'Running Backs', physicalWeight: 0.013, category: 'Offense' },
 ];
 
 const radarData = [
@@ -54,12 +52,10 @@ export default function CrossSportAnalysis() {
 
   const positionalData = {
     NFL: [
-      { position: 'Defensive Line', physicalWeight: 0.62, category: 'Defense' },
-      { position: 'Linebackers', physicalWeight: 0.55, category: 'Defense' },
-      { position: 'DefBs / Safeties', physicalWeight: 0.48, category: 'Defense' },
-      { position: 'Wide Receivers', physicalWeight: 0.22, category: 'Offense' },
-      { position: 'Running Backs', physicalWeight: 0.15, category: 'Offense' },
-      { position: 'Quarterbacks', physicalWeight: 0.08, category: 'Offense' },
+      { position: 'Defense (Pooled)', physicalWeight: 0.599, category: 'Defense' },
+      { position: 'Wide Receivers', physicalWeight: 0.238, category: 'Offense' },
+      { position: 'Quarterbacks', physicalWeight: 0.140, category: 'Offense' },
+      { position: 'Running Backs', physicalWeight: 0.013, category: 'Offense' },
     ],
     NBA: [
       { position: 'Center', physicalWeight: 0.35, category: 'Frontcourt' },
