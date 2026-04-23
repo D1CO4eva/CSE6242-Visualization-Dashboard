@@ -65,10 +65,9 @@ export default function CrossSportAnalysis() {
       { position: 'Point Guard', physicalWeight: 0.05, category: 'Backcourt' },
     ],
     MLB: [
-      { position: 'Pitchers', physicalWeight: 0.28, category: 'Mound' },
-      { position: 'Catchers', physicalWeight: 0.18, category: 'Defense' },
-      { position: 'Outfielders', physicalWeight: 0.12, category: 'Field' },
-      { position: 'Infielders', physicalWeight: 0.09, category: 'Field' },
+      { position: 'Infielders', physicalWeight: 0.082, category: 'Field' },
+      { position: 'Catchers', physicalWeight: 0.037, category: 'Defense' },
+      { position: 'Outfielders', physicalWeight: 0.018, category: 'Field' },
     ],
     Soccer: [
       { position: 'Goalkeepers', physicalWeight: 0.089, category: 'Defense' },
