@@ -118,11 +118,11 @@ function App() {
                 </div>
                 <div className="flex gap-4">
                   <div className="metric-card px-4 py-2 rounded-lg flex flex-col justify-center">
-                    <div className="text-[10px] text-slate-500 uppercase font-bold tracking-tight">Baseline R² (Physics)</div>
+                    <div className="text-[10px] text-slate-500 uppercase font-bold tracking-tight">{sport.baselineLabel ?? 'Baseline R² (Physics)'}</div>
                     <div className="text-xl font-bold text-slate-300">{sport.baselineRSquared.toFixed(3)}</div>
                   </div>
                   <div className="metric-card px-4 py-2 rounded-lg border-indigo-500/50 bg-indigo-950/20 flex flex-col justify-center shadow-inner shadow-indigo-500/10">
-                    <div className="text-[10px] text-indigo-400 uppercase font-bold tracking-tight">Enhanced R² (Skills)</div>
+                    <div className="text-[10px] text-indigo-400 uppercase font-bold tracking-tight">{sport.enhancedLabel ?? 'Enhanced R² (Skills)'}</div>
                     <div className="text-xl font-bold text-indigo-400">{sport.enhancedRSquared.toFixed(3)}</div>
                   </div>
                 </div>

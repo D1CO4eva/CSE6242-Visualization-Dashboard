@@ -7,7 +7,7 @@ import { Activity, Target, ShieldAlert, TrendingDown } from 'lucide-react';
 
 const rSquaredData = [
   { sport: 'Basketball', 'Physical Only': 0.005, 'Enhanced (Skills)': 0.677 },
-  { sport: 'Soccer', 'Physical Only': 0.045, 'Enhanced (Skills)': 0.680 },
+  { sport: 'Soccer', 'Physical Only': 0.002, 'Enhanced (Skills)': 0.089 },
   { sport: 'Baseball', 'Physical Only': 0.255, 'Enhanced (Skills)': 0.480 },
   { sport: 'Football', 'Physical Only': 0.354, 'Enhanced (Skills)': 0.812 },
 ];
@@ -75,11 +75,12 @@ export default function CrossSportAnalysis() {
       { position: 'Infielders', physicalWeight: 0.09, category: 'Field' },
     ],
     Soccer: [
-      { position: 'Center Backs', physicalWeight: 0.38, category: 'Defense' },
-      { position: 'Goalkeepers', physicalWeight: 0.32, category: 'Defense' },
-      { position: 'Strikers', physicalWeight: 0.22, category: 'Forward' },
-      { position: 'Wingers', physicalWeight: 0.14, category: 'Midfield' },
-      { position: 'Central Midfielders', physicalWeight: 0.09, category: 'Midfield' },
+      { position: 'Goalkeepers', physicalWeight: 0.089, category: 'Defense' },
+      { position: 'Center Backs', physicalWeight: 0.074, category: 'Defense' },
+      { position: 'Strikers', physicalWeight: 0.067, category: 'Forward' },
+      { position: 'Defensive Mids', physicalWeight: 0.050, category: 'Midfield' },
+      { position: 'Central Mids', physicalWeight: 0.045, category: 'Midfield' },
+      { position: 'Wingers', physicalWeight: 0.019, category: 'Midfield' },
     ]
   };
 
@@ -189,7 +190,7 @@ export default function CrossSportAnalysis() {
                 activeRadarSport === 'NBA' ? "High Efficiency & Skill Execution, gated strongly by Role Dependency (Height)." :
                 activeRadarSport === 'MLB' ? "Dominated entirely by isolated Skill Execution with minimal System Dependency." :
                 activeRadarSport === 'NFL' ? "Maximized System Dependency and Explosiveness; physics dictate outcomes." :
-                "Fluid, workload-driven. Explosiveness and Efficiency override static size markers entirely."
+                "EDA-only (no ridge model). FIFA shows weak overall size-performance correlation; signal concentrates at Goalkeeper and Center Back. SoccerMon adds GPS workload/fatigue as a dynamic lens."
               }
             </p>
           </div>

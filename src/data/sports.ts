@@ -17,6 +17,8 @@ export interface SportData {
   insight: string;
   baselineRSquared: number;
   enhancedRSquared: number;
+  baselineLabel?: string;
+  enhancedLabel?: string;
   topPhysicalPredictor: string;
   weakestCorrelation: string;
   features: FeatureImportance[];
@@ -80,19 +82,21 @@ export const sportsData: Record<SportId, SportData> = {
   soccer: {
     id: 'soccer',
     name: 'Soccer',
-    acronym: 'EPL',
-    summary: 'Workload and physiological monitoring vs. static size measures',
-    insight: 'Soccer introduces dynamic workload and physiological monitoring as an alternative to static size measures.',
-    baselineRSquared: 0.045,
-    enhancedRSquared: 0.680,
-    topPhysicalPredictor: 'Sprint Speed',
-    weakestCorrelation: 'Player Height',
+    acronym: 'FIFA',
+    summary: 'FIFA position-level correlations + SoccerMon GPS/HR monitoring (EDA)',
+    insight: 'Soccer is observational: no ridge model. FIFA data (n=122,841) shows height barely correlates with overall rating (r=0.046, r²≈0.2%) and weight is weak (r=0.146, r²≈2.1%). The signal concentrates by position — Goalkeeper weight peaks at r=0.30 (r²≈8.9%) and Center Back at r=0.27. SoccerMon GPS adds a dynamic workload/fatigue lens that static anthropometrics miss.',
+    baselineRSquared: 0.002,
+    enhancedRSquared: 0.089,
+    baselineLabel: 'Pooled Height r²',
+    enhancedLabel: 'Best Position r² (GK Wt)',
+    topPhysicalPredictor: 'Weight (Goalkeeper)',
+    weakestCorrelation: 'Height (Pooled, Wingers)',
     features: [
-      { id: 'xg', name: 'Expected Goals+Assists (xG+xA)', category: 'skill', baseline: 0, enhanced: 35.0 },
-      { id: 'pass', name: 'Pass Cmp % in Final 3rd', category: 'skill', baseline: 0, enhanced: 28.5 },
-      { id: 'prog', name: 'Progressive Carries', category: 'skill', baseline: 0, enhanced: 22.0 },
-      { id: 'stamina', name: 'Distance Covered (Physical)', category: 'physical', baseline: 12.5, enhanced: 6.5 },
-      { id: 'height', name: 'Height (Physical)', category: 'physical', baseline: 8.0, enhanced: 1.2 },
+      { id: 'gk_weight', name: 'Weight — Goalkeeper (r²)', category: 'physical', baseline: 8.9, enhanced: 8.9 },
+      { id: 'cb_weight', name: 'Weight — Center Back (r²)', category: 'physical', baseline: 7.4, enhanced: 7.4 },
+      { id: 'st_weight', name: 'Weight — Striker (r²)', category: 'physical', baseline: 6.7, enhanced: 6.7 },
+      { id: 'gk_height', name: 'Height — Goalkeeper (r²)', category: 'physical', baseline: 2.5, enhanced: 2.5 },
+      { id: 'pooled_weight', name: 'Weight — Pooled (r²)', category: 'physical', baseline: 2.1, enhanced: 2.1 },
     ],
   }
 };
