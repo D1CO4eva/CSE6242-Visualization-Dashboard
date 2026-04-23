@@ -6,7 +6,7 @@ import {
 import { Activity, Target, ShieldAlert, TrendingDown } from 'lucide-react';
 
 const rSquaredData = [
-  { sport: 'Basketball', 'Physical Only': 0.005, 'Enhanced (Skills)': 0.677 },
+  { sport: 'Basketball', 'Physical Only': 0.008, 'Enhanced (Skills)': 0.772 },
   { sport: 'Soccer', 'Physical Only': 0.002, 'Enhanced (Skills)': 0.089 },
   { sport: 'Baseball', 'Physical Only': 0.255, 'Enhanced (Skills)': 0.480 },
   { sport: 'Football', 'Physical Only': 0.354, 'Enhanced (Skills)': 0.812 },
