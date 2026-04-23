@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+coverage
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+*.log
+poster_unpacked
+final_report.md
+football.txt
+Poster.pptx
